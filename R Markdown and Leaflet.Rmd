@@ -1,0 +1,26 @@
+---
+title: "R Markdown and Leaflet"
+author: "mike foo"
+#date: "3/31/2021"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+<span style="text-decoration:underline;font-style:bold;font-size: 20px">
+ **Date : Wed Mar 31 20:41:51 2021**
+</span>
+
+```{r maps, echo=FALSE, warning=FALSE}
+library(leaflet)
+my_map <- leaflet() %>%
+  addTiles() %>%
+  addMarkers(lat=1.404376653710449, lng=103.7930243390051, 
+             popup="SG Zoo")
+my_map
+
+```
+
+Note that the `echo = FALSE` `warning=FALSE` parameter was added to the code chunk to prevent printing of the R code that generated the map and warning
